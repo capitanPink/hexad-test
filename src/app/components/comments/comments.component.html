@@ -1,0 +1,10 @@
+<div class="comments">
+  <app-add-comment [post]="post"></app-add-comment>
+  <ul class="comments__list">
+    <li *ngFor="let comment of post.comments" class="comments__item">
+      <app-avatar></app-avatar>
+      <p class="comments__item-message">{{ comment.message }}</p>
+    </li>
+  </ul>
+</div>
+

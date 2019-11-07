@@ -1,0 +1,14 @@
+<div class="new-post">
+  <div class="new-post__header">
+    <app-avatar></app-avatar>
+    <span class="new-post__header-title">
+      What's happening?
+    </span>
+  </div>
+  <div class="new-post__body">
+    <textarea placeholder="White something..." class="new-post__body-textarea" [(ngModel)]="text"></textarea>
+  </div>
+  <div class="new-post__footer">
+    <button (click)="createPost()" class="new-post__footer-create">Post</button>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="search">
+  <input (input)="searchPosts()" class="search__input" type="text" [(ngModel)]="value">
+  <span *ngIf="!value" class="search__icon">Search</span>
+  <button class="search__clear" mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="clearValue()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

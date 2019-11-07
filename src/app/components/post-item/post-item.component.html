@@ -1,0 +1,31 @@
+<div class="post">
+  <div class="post__header">
+    <div class="post__header-left">
+      <app-avatar></app-avatar>
+      <div class="post__header-personal">
+        <p>
+          {{ post.author.firstName }} {{ post.author.lastName }} <span class="post__header-personal-username">{{ post.author.username }}</span>
+        </p>
+        <p class="post__header-personal-time">
+          {{ post.timeToRead}}
+        </p>
+      </div>
+    </div>
+    <button class="post__header-follow">
+      Follow
+    </button>
+  </div>
+  <div class="post__body">
+    {{ post.text | slice:0:175 }}
+  </div>
+  <div class="post__footer">
+    <button (click)="updateLike(post)" class="post__footer-like">
+      <span class="post__footer-like-icon" [ngClass]="{'post__footer-like-icon--enabled': isLiked}">{{ post.likes }}</span>
+    </button>
+    <button (click)="toggleComments()" class="post__footer-comment">
+      <span class="post__footer-comment-icon">Comment</span>
+      <span *ngIf="isCommentsOpen"> - {{ post.comments.length }}</span>
+    </button>
+  </div>
+</div>
+<app-comments [post]="post" *ngIf="isCommentsOpen"></app-comments>

@@ -1,0 +1,31 @@
+@import '../../../common/styles/index';
+
+.add-comment {
+  margin-bottom: 10px;
+
+  &__textarea {
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    min-height: 50px;
+    resize: none;
+    font-size: 0.8em;
+  }
+
+  &__add {
+    background-color: $color-button;
+    font-size: 0.9em;
+    height: 30px;
+    color: $color-white;
+    border: none;
+    border-radius: 3px;
+    padding: 0 10px;
+  }
+
+  &__add-icon {
+    background-image: url(/assets/images/telegram.svg);
+    background-repeat: no-repeat;
+    padding-left: 22px;
+  }
+}
